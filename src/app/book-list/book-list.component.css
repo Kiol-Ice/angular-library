@@ -1,5 +1,19 @@
 .book-card {
-  /* max-width: 400px; */
-  /* background-color: gray; */
-  /* padding: 10px; */
+  min-width: 250px;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+}
+
+.book-title{
+  font-style: italic;
+  font-size: large;
+}
+
+.card-button{
+  color: white;
+  background-color: #3c6cc9;
+}
+
+.label{
+  color: #5a5a5a;
 }

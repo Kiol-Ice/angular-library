@@ -1,22 +1,36 @@
-<p>Choose a book !</p>
-<mat-grid-list cols="4" rowHeight="3:1" [gutterSize]="'10px'">
+<mat-grid-list cols="4" [rowHeight]="'300px'" [gutterSize]="'20px'" class="m-4">
   @for (book of displayedBooks; track book) {
-     <mat-grid-tile > <!-- class="mat-elevation-z8" -->
-      <mat-card class="book-card">
-        <mat-card-header>
-          <!-- <mat-card-subtitle>Category</mat-card-subtitle> -->
-          <mat-card-title>{{ book.title }}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>This card has divider and indeterminate progress as footer</p>
-          <p>{{ book.author }}</p>
-          <mat-divider></mat-divider>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>Details</button>
-          <button mat-button>Wiki</button>
-        </mat-card-actions>
-    </mat-card>
+     <mat-grid-tile class="book-card mat-elevation-z8" >
+      <mat-grid-tile-header [style.background]="'#3c6cc9'" class="book-title">{{ book.title }}</mat-grid-tile-header>
+
+      <div class="flex mx-2">
+        <p>
+          <span class="label">Author : </span>
+          <span>{{ book.author}}</span>
+        </p>
+        <p>
+          <span class="label">Country : </span>
+          <span>{{ book.country}}</span>
+        </p>
+        <p>
+          <span class="label">Language : </span>
+          <span>{{ book.language}}</span>
+        </p>
+        <p>
+          <span class="label">Year : </span>
+          <span>{{ book.year}}</span>
+        </p>
+        <p>
+          <span class="label">Number of pages : </span>
+          <span>{{ book.pages}}</span>
+        </p>
+      </div>
+
+
+      <mat-grid-tile-footer [style.background]="'#e6e6e6'" class="space-between my-1">
+        <a mat-button class="card-button" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Details</a>
+        <a class="card-button" mat-button href={{book.link}} target="_blank">Wiki</a>
+      </mat-grid-tile-footer>
     </mat-grid-tile>
   }
 </mat-grid-list>

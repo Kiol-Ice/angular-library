@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import {MatButtonModule} from '@angular/material/button';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatCardModule} from '@angular/material/card';
 
 import booksJson from '../../assets/books.json';
 import { Book } from '../class/book';
@@ -12,11 +11,11 @@ import { Book } from '../class/book';
   selector: 'app-book-list',
   standalone: true,
   imports: [
+    RouterLink,
+    RouterLinkActive,
     MatGridListModule,
     MatPaginatorModule,
     MatButtonModule,
-    MatDividerModule,
-    MatCardModule,
   ],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
@@ -25,7 +24,7 @@ export class BookListComponent {
   books :Book[] = [];
   displayedBooks :Book[] = [];
   length:number;
-  pageSize:number = 16;
+  pageSize:number = 8;
   pageIndex: number = 0;
   pageEvent: PageEvent;
 
@@ -49,4 +48,7 @@ export class BookListComponent {
     const part = this.books.slice(start, end);
     this.displayedBooks = part;
   }
+
+  // Responsive ??
+  // https://stackoverflow.com/questions/45188134/change-the-layout-or-cols-value-of-md-grid-list-based-on-screen-size
 }
