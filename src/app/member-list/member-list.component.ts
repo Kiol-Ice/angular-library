@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
-import { PaginatorInterface } from '../class/paginatorInterface';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import {MatButtonModule} from '@angular/material/button';
-
-import { Book } from '../class/book';
-import { BookService } from '../service/book.service';
+import { PaginatorInterface } from '../class/paginatorInterface';
+import { Member } from '../class/member';
+import { MemberService } from '../service/member.service';
 
 @Component({
-  selector: 'app-book-list',
+  selector: 'app-member-list',
   standalone: true,
   imports: [
     RouterLink,
@@ -18,21 +17,21 @@ import { BookService } from '../service/book.service';
     MatPaginatorModule,
     MatButtonModule,
   ],
-  templateUrl: './book-list.component.html',
-  styleUrl: './book-list.component.css'
+  templateUrl: './member-list.component.html',
+  styleUrl: './member-list.component.css'
 })
-export class BookListComponent implements PaginatorInterface {
-  books :Book[] = [];
-  displayedBooks :Book[] = [];
+export class MemberListComponent implements PaginatorInterface{
+  members :Member[] = [];
+  displayedMembers :Member[] = [];
   length:number;
   pageSize:number = 8;
   pageIndex: number = 0;
   pageEvent: PageEvent;
 
-  constructor(private bookService: BookService) {}
+  constructor(private memberService: MemberService) {}
 
   ngOnInit() {
-    this.books = this.bookService.getBooks();
+    this.members = this.memberService.getMembers();
     this.iterator();
   }
 
@@ -45,10 +44,8 @@ export class BookListComponent implements PaginatorInterface {
   public iterator() {
     const end = (this.pageIndex + 1) * this.pageSize;
     const start = this.pageIndex * this.pageSize;
-    const part = this.books.slice(start, end);
-    this.displayedBooks = part;
+    const part = this.members.slice(start, end);
+    this.displayedMembers = part;
   }
 
-  // Responsive ??
-  // https://stackoverflow.com/questions/45188134/change-the-layout-or-cols-value-of-md-grid-list-based-on-screen-size
 }

@@ -1,0 +1,26 @@
+<mat-grid-list cols="4" [rowHeight]="'200px'" [gutterSize]="'20px'">
+  @for (member of displayedMembers; track member) {
+     <mat-grid-tile class="book-card mat-elevation-z8" >
+
+      <div class="flex mx-2">
+        <p>
+          <span class="label">First name : </span>
+          <span>{{ member.firstname}}</span>
+        </p>
+        <p>
+          <span class="label">Last name : </span>
+          <span>{{ member.lastname}}</span>
+        </p>
+      </div>
+    </mat-grid-tile>
+  }
+</mat-grid-list>
+
+<mat-paginator  [length]="members.length"
+                [pageIndex]="pageIndex"
+                [pageSize]="pageSize"
+                [pageSizeOptions]="[8, 16, 32, 64, 128]"
+                (page)="handlePage($event)"
+                aria-label="Select page">
+</mat-paginator>
+
