@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --primary-color: #3f51b5;
+  --accent-color: #3c6cc9;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -26,6 +31,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .m-4 {
   margin: 2rem;
 }
+
+.m-5 {
+  margin: 2.5rem;
+}
+
+.m-6 {
+  margin: 3rem;
+}
+
+/*
+Spring corleone - <HTML tag>
+
+1rem
+2rem
+3rem
+4rem
+Faut l'SVG, les Div et les items
+5rem
+6rem
+7rem
+8rem
+J'encaisse du margin au padding
+ */
 
 .mx-1 {
   margin-left: 0.5rem;
@@ -75,4 +103,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .my-4 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mt-5 {
+  margin-top: 2.5rem;
+}
+
+.mt-6 {
+  margin-top: 3rem;
 }

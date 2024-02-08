@@ -11,7 +11,7 @@
 
 .card-button{
   color: white;
-  background-color: #3c6cc9;
+  background-color: var(--accent-color);
 }
 
 .label{

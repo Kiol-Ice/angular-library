@@ -1,0 +1,28 @@
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+h2{
+  font-weight: normal;
+}
+
+.row{
+  display: flex;
+  flex: auto;
+}
+
+.self-center{
+  align-self: center;
+}
+
+.font-h2{
+  font-size: 1.5em;
+}
+
+.home-button{
+  align-self: center;
+  font-size: 1.5em;
+  background-color: var(--primary-color);
+  color: white;
+}
