@@ -8,12 +8,23 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+/* Générique */
+
 .flex{
   flex: auto;
 }
 
 .space-between{
   justify-content: space-between;
+}
+
+.row{
+  display: flex;
+  flex: auto;
+}
+
+.self-center{
+  align-self: center;
 }
 
 .m-1 {
@@ -136,4 +147,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .p-6 {
   padding: 3rem;
+}
+
+
+
+
+/* Personnalisation */
+
+.book-card {
+  min-width: 250px;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+}
+
+.book-title{
+  font-style: italic;
+  font-size: large;
+}
+
+.label{
+  color: #5a5a5a;
 }

@@ -4,6 +4,7 @@ import { Book } from '../class/book';
 import { BookService } from '../book.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-book-detail',
@@ -13,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatButtonModule,
     RouterLink,
     RouterLinkActive,
+    MatIconModule,
   ],
   templateUrl: './book-detail.component.html',
   styleUrl: './book-detail.component.css'

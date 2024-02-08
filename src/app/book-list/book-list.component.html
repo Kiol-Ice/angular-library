@@ -1,4 +1,4 @@
-<mat-grid-list cols="4" [rowHeight]="'300px'" [gutterSize]="'20px'">
+<mat-grid-list cols="4" [rowHeight]="'200px'" [gutterSize]="'20px'">
   @for (book of displayedBooks; track book) {
      <mat-grid-tile class="book-card mat-elevation-z8" >
       <mat-grid-tile-header [style.background]="'#3c6cc9'" class="book-title">{{ book.title }}</mat-grid-tile-header>
@@ -9,20 +9,8 @@
           <span>{{ book.author}}</span>
         </p>
         <p>
-          <span class="label">Country : </span>
-          <span>{{ book.country}}</span>
-        </p>
-        <p>
           <span class="label">Language : </span>
           <span>{{ book.language}}</span>
-        </p>
-        <p>
-          <span class="label">Year : </span>
-          <span>{{ book.year}}</span>
-        </p>
-        <p>
-          <span class="label">Number of pages : </span>
-          <span>{{ book.pages}}</span>
         </p>
       </div>
 

@@ -1,25 +1,31 @@
-<div class="book-card p-2">
-    <div class="mx-2">
-        <p class="book-title">{{ selectedBook.title}}</p>
-        <p>
-            <span class="label">Author : </span>
-            <span>{{ selectedBook.author}}</span>
-        </p>
-        <p>
-            <span class="label">Country : </span>
-            <span>{{ selectedBook.country}}</span>
-        </p>
-        <p>
-            <span class="label">Language : </span>
-            <span>{{ selectedBook.language}}</span>
-        </p>
-        <p>
-            <span class="label">Year : </span>
-            <span>{{ selectedBook.year}}</span>
-        </p>
-        <p>
-            <span class="label">Number of pages : </span>
-            <span>{{ selectedBook.pages}}</span>
-        </p>
+<div class="book-card">
+  <div class="header">
+    <button mat-icon-button routerLink="/book-list" routerLinkActive="active">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    <p class="book-title mx-2">{{ selectedBook.title}}</p>
+  </div>
+  <div class="p-2">
+    <span class="label">Author : </span>
+    <span>{{ selectedBook.author}}</span>
+  </div>
+  <div class="p-2">
+    <span class="label">Country : </span>
+    <span>{{ selectedBook.country}}</span>
+  </div>
+  <div class="p-2">
+    <span class="label">Language : </span>
+    <span>{{ selectedBook.language}}</span>
+  </div>
+  <div class="p-2">
+    <span class="label">Year : </span>
+    <span>{{ selectedBook.year}}</span>
+  </div>
+  <div class="p-2 row ">
+    <div>
+      <span class="label">Number of pages : </span>
+      <span>{{ selectedBook.pages}}</span>
     </div>
+    <a class="card-button mx-2" mat-button href={{selectedBook.link}} target="_blank">Wiki</a>
+  </div>
 </div>

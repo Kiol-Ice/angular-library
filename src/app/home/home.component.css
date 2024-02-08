@@ -7,15 +7,6 @@ h2{
   font-weight: normal;
 }
 
-.row{
-  display: flex;
-  flex: auto;
-}
-
-.self-center{
-  align-self: center;
-}
-
 .font-h2{
   font-size: 1.5em;
 }
