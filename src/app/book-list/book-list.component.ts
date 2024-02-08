@@ -4,7 +4,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import {MatButtonModule} from '@angular/material/button';
 
-import booksJson from '../../assets/books.json';
 import { Book } from '../class/book';
 import { BookService } from '../book.service';
 
