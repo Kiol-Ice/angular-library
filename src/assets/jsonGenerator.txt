@@ -1,0 +1,24 @@
+[
+  '{{repeat(30)}}',
+  {
+    id: '{{index()}}',
+    memberId: '{{integer(1, 25)}}',
+    bookId: '{{integer(1, 100)}}',
+    date: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd")}}',
+    duration: '{{integer(1,30)}}',
+    isReturned: '{{bool()}}'
+  }
+]
+
+
+[
+  '{{repeat(25)}}',
+  {
+    id: '{{index()}}',
+    firstname: '{{firstName()}}',
+    lastname: '{{surname()}}',
+    email: function (tags) {
+      return this.firstname + '.' + this.lastname +  '@gmail.com';
+    }
+  }
+]

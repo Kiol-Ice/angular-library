@@ -16,7 +16,7 @@ export class BookService {
     });
   }
 
-  getbooks(): Book[] {
+  getBooks(): Book[] {
     return this.books;
   }
 

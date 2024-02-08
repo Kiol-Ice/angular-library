@@ -31,7 +31,7 @@ export class BookListComponent {
   constructor(private bookService: BookService) {}
 
   ngOnInit() {
-    this.books = this.bookService.getbooks(); 
+    this.books = this.bookService.getBooks();
     this.iterator();
   }
 
