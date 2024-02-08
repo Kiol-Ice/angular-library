@@ -40,21 +40,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin: 3rem;
 }
 
-/*
-Spring corleone - <HTML tag>
-
-1rem
-2rem
-3rem
-4rem
-Faut l'SVG, les Div et les items
-5rem
-6rem
-7rem
-8rem
-J'encaisse du margin au padding
- */
-
 .mx-1 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -127,4 +112,28 @@ J'encaisse du margin au padding
 
 .mt-6 {
   margin-top: 3rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.p-5 {
+  padding: 2.5rem;
+}
+
+.p-6 {
+  padding: 3rem;
 }

@@ -6,6 +6,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 import booksJson from '../../assets/books.json';
 import { Book } from '../class/book';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-book-list',
@@ -28,11 +29,10 @@ export class BookListComponent {
   pageIndex: number = 0;
   pageEvent: PageEvent;
 
+  constructor(private bookService: BookService) {}
+
   ngOnInit() {
-    booksJson.forEach((book) => {
-      let newBook = new Book(book.author, book.country, book.language, book.link, book.pages, book.title, book.year);
-      this.books.push(newBook);
-    });
+    this.books = this.bookService.getbooks(); 
     this.iterator();
   }
 

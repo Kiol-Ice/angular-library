@@ -1,4 +1,4 @@
-<mat-grid-list cols="4" [rowHeight]="'300px'" [gutterSize]="'20px'" class="m-4">
+<mat-grid-list cols="4" [rowHeight]="'300px'" [gutterSize]="'20px'">
   @for (book of displayedBooks; track book) {
      <mat-grid-tile class="book-card mat-elevation-z8" >
       <mat-grid-tile-header [style.background]="'#3c6cc9'" class="book-title">{{ book.title }}</mat-grid-tile-header>
@@ -28,7 +28,7 @@
 
 
       <mat-grid-tile-footer [style.background]="'#e6e6e6'" class="space-between my-1">
-        <a mat-button class="card-button" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Details</a>
+        <a mat-button class="card-button" [routerLink]="['/book-detail', book.id]" routerLinkActive="active" ariaCurrentWhenActive="page">Details</a>
         <a class="card-button" mat-button href={{book.link}} target="_blank">Wiki</a>
       </mat-grid-tile-footer>
     </mat-grid-tile>

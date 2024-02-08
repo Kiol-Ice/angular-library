@@ -1,0 +1,10 @@
+.book-card {
+  min-width: 250px;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+}
+
+.book-title{
+  font-style: italic;
+  font-size: large;
+}
