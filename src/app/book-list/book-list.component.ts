@@ -5,7 +5,7 @@ import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import {MatButtonModule} from '@angular/material/button';
 
 import { Book } from '../class/book';
-import { BookService } from '../book.service';
+import { BookService } from '../service/book.service';
 
 @Component({
   selector: 'app-book-list',

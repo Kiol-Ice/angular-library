@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Book } from './class/book';
+import { Book } from '../class/book';
 
-import booksJson from '../assets/books.json';
+import booksJson from '../../assets/books.json';
 
 @Injectable({
   providedIn: 'root'

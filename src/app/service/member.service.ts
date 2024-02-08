@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import membersJson from '../assets/members.json';
-import { Member } from './class/member';
+import membersJson from '../../assets/members.json';
+import { Member } from '../class/member';
 
 @Injectable({
   providedIn: 'root'
