@@ -1,0 +1,14 @@
+<app-detail-card [headerText]="selectedMember.firstname + ' ' + selectedMember.lastname" [backRoute]="'/member-list'">
+  <div class="p-2">
+    <span class="label">First Name : </span>
+    <span>{{ selectedMember.firstname}}</span>
+  </div>
+  <div class="p-2">
+    <span class="label">Last Name : </span>
+    <span>{{ selectedMember.lastname}}</span>
+  </div>
+  <div class="p-2">
+    <span class="label">Email : </span>
+    <span>{{ selectedMember.email}}</span>
+  </div>
+</app-detail-card>

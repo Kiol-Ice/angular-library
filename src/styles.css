@@ -154,7 +154,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Personnalisation */
 
-.book-card {
+.detail-card {
   min-width: 250px;
   background-color: #e6e6e6;
   border-radius: 5px;

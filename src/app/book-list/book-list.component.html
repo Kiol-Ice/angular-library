@@ -1,6 +1,6 @@
 <mat-grid-list cols="4" [rowHeight]="'200px'" [gutterSize]="'20px'">
   @for (book of displayedBooks; track book) {
-     <mat-grid-tile class="book-card mat-elevation-z8" >
+     <mat-grid-tile class="detail-card mat-elevation-z8" >
       <mat-grid-tile-header [style.background]="'#3c6cc9'" class="book-title">{{ book.title }}</mat-grid-tile-header>
 
       <div class="flex mx-2">
@@ -28,5 +28,6 @@
                 [pageSize]="pageSize"
                 [pageSizeOptions]="[8, 16, 32, 64, 128]"
                 (page)="handlePage($event)"
-                aria-label="Select page">
+                aria-label="Select page"
+                class="mt-2">
 </mat-paginator>

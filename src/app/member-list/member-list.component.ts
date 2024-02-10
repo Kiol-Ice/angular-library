@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
-import {MatButtonModule} from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule, PageEvent} from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
 import { PaginatorInterface } from '../class/paginatorInterface';
 import { Member } from '../class/member';
 import { MemberService } from '../service/member.service';
@@ -11,9 +11,9 @@ import { MemberService } from '../service/member.service';
   selector: 'app-member-list',
   standalone: true,
   imports: [
+    MatTableModule,
     RouterLink,
     RouterLinkActive,
-    MatGridListModule,
     MatPaginatorModule,
     MatButtonModule,
   ],
@@ -24,9 +24,11 @@ export class MemberListComponent implements PaginatorInterface{
   members :Member[] = [];
   displayedMembers :Member[] = [];
   length:number;
-  pageSize:number = 8;
+  pageSize:number = 10;
   pageIndex: number = 0;
   pageEvent: PageEvent;
+
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'detail'];
 
   constructor(private memberService: MemberService) {}
 

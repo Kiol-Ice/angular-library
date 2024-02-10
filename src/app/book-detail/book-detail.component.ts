@@ -5,6 +5,7 @@ import { BookService } from '../service/book.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { DetailCardComponent } from '../detail-card/detail-card.component';
 
 @Component({
   selector: 'app-book-detail',
@@ -15,6 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
     RouterLink,
     RouterLinkActive,
     MatIconModule,
+    DetailCardComponent,
   ],
   templateUrl: './book-detail.component.html',
   styleUrl: './book-detail.component.css'
