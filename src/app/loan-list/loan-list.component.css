@@ -29,3 +29,8 @@
   background-color: var(--accent-color);
 }
 
+td a {
+  width: -webkit-fill-available;
+  white-space: nowrap;
+}
+
