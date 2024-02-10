@@ -1,0 +1,31 @@
+.demo-table {
+  width: 100%;
+}
+
+.mat-column-id {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-member {
+  padding-left: 16px;
+  width: 50px;
+}
+
+.mat-column-book {
+  width: 50px;
+}
+
+.mat-column-returned {
+  width: 32px;
+}
+
+.detail-button{
+  /* padding-left: 3rem;
+  padding-right: 3rem; */
+  color: white;
+  background-color: var(--accent-color);
+}
+

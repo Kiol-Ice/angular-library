@@ -1,0 +1,58 @@
+<table mat-table [dataSource]="displayedLoans" class="mat-elevation-z8 demo-table">
+  <!-- id Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- firstName Column -->
+  <ng-container matColumnDef="member">
+    <th mat-header-cell *matHeaderCellDef> Member </th>
+    <td mat-cell *matCellDef="let element">
+      <a mat-button class="detail-button" [routerLink]="['/member-detail', element.memberId]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ element.memberId | getMemberName }}</a>
+    </td>
+  </ng-container>
+
+  <!-- lastName Column -->
+  <ng-container matColumnDef="book">
+    <th mat-header-cell *matHeaderCellDef> Book </th>
+    <td mat-cell *matCellDef="let element">
+      <a mat-button class="detail-button" [routerLink]="['/book-detail', element.bookId]" routerLinkActive="active" ariaCurrentWhenActive="page">{{ element.bookId | getBookTitle }}</a>
+    </td>
+  </ng-container>
+
+  <!-- email Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element">{{element.date}}</td>
+  </ng-container>
+
+  <!-- detail Column -->
+  <ng-container matColumnDef="duration">
+    <th mat-header-cell *matHeaderCellDef> Duration (days) </th>
+    <td mat-cell *matCellDef="let element">{{element.duration}}</td>
+  </ng-container>
+
+  <!-- detail Column -->
+  <ng-container matColumnDef="returned">
+    <th mat-header-cell *matHeaderCellDef> Returned </th>
+    <td mat-cell *matCellDef="let element">
+      <div *ngIf="element.isReturned; then thenBlock; else elseBlock">this is ignored</div>
+      <ng-template #thenBlock><mat-icon class="mx-3" fontIcon="check"></mat-icon></ng-template>
+      <ng-template #elseBlock><mat-icon class="mx-3" fontIcon="close"></mat-icon></ng-template>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator  [length]="loans.length"
+                [pageIndex]="pageIndex"
+                [pageSize]="pageSize"
+                [pageSizeOptions]="[5, 10, 20, 50]"
+                (page)="handlePage($event)"
+                aria-label="Select page"
+                class="mt-2">
+</mat-paginator>
+
