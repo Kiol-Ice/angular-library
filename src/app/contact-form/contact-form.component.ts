@@ -40,10 +40,11 @@ export class ContactFormComponent {
   });
 
   onSubmit(): void {
-    // Process checkout data here
-    console.warn('Your message : ', this.contactForm.value);
-    //this.contactForm.reset();
-    this.openDialog(this.contactForm.value.email!, this.contactForm.value.message!)
+    if (this.contactForm.valid) {
+      //console.warn('Your message : ', this.contactForm.value);
+      //this.contactForm.reset();
+      this.openDialog(this.contactForm.value.email!, this.contactForm.value.message!)
+    }
   }
 
   openDialog(email: string, message: string): void {
