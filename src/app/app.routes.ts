@@ -5,6 +5,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { MemberListComponent } from './member-list/member-list.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
 import { LoanListComponent } from './loan-list/loan-list.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 export const routes: Routes = [
   //{ path: 'first-component', component: FirstComponent },
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'member-list', component: MemberListComponent },
   { path: 'member-detail/:id', component: MemberDetailComponent },
   { path: 'loan-list', component: LoanListComponent },
+  { path: 'contact', component: ContactFormComponent },
   { path: 'home', component: HomeComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
 ];
